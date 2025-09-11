@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAZACART | الصفحة الرئيسية</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" dir="rtl">
+  <div class="container">
+    <a href="#hero" class="logo-link">
+      <img src="images/logocart.svg" alt="logo" class="logo">
+    </a>
+    <nav class="nav">
+      <a href="#">الرئيسية</a>
+      <a href="#best">أفضل المتاجر</a>
+      <a href="#clothes">متاجر الملابس</a>
+      <a href="#accessories">متاجر الاكسسوارات</a>
+      <a href="#sweets">متاجر الحلويات</a>
+      <a href="#footer">اتصل بنا</a>
+    </nav>
+    <div class="cart">
+      <img src="images/Frame 20.png" alt="سلة">
+      <span>4</span>
+    </div>
+  </div>
+</header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-img">
+        <img src="images/pana.png" alt="تسوق الآن">
+      </div>
+      <div class="hero-text">
+        <h1>تسوق الآن 🛒 | متاجر غزة في مكان واحد 🏬</h1>
+        <p>⚡سهولة وسرعة |</p>
+        <button class="btn yellow">تسجيل</button>
+      </div>
+    </div>
+  </section>
+
+<!-- Modal -->
+<div class="modal" id="authModal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('authModal').style.display='none'">&times;</span>
+
+    <!-- التبويبات -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="signup">تسجيل</button>
+      <button class="tab-btn" data-tab="signin">تسجيل دخول</button>
+    </div>
+
+    <div class="modal-body">
+      <!-- الصورة -->
+      <div class="modal-img">
+        <img src="images/Frame 7617.png" alt="تسجيل">
+      </div>
+
+      <!-- النموذج -->
+      <div class="modal-form">
+        <!-- تبويب تسجيل -->
+        <div class="tab-content active" id="signup">
+          <h2>تسجيل</h2>
+          <p><strong>دقائق قليلة تفصلك عن التسوق من مختلف المتاجر في غزة... سجل الآن وابدأ رحلتك الشرائية بسهولة وأمان.</strong></p>
+
+          <label>الاسم كامل</label>
+          <input type="text" placeholder="ادخل اسمك الكامل">
+
+          <label>رقم الهاتف</label>
+          <div class="phone-input">
+            <img src="images/flag-palestinian.png" alt="PA">
+            <input type="text" placeholder="+972 59 111 1111">
+          </div>
+
+          <label>البريد الالكتروني</label>
+          <input type="email" placeholder="ادخل البريد الالكتروني">
+
+          <button class="btn yellow small-btn">تسجيل</button>
+        </div>
+
+        <!-- تبويب تسجيل دخول -->
+        <div class="tab-content" id="signin">
+          <h2>تسجيل دخول</h2>
+          <p><strong>أهلاً بعودتك 👋... تابع تسوقك من متاجر غزة وسجل دخولك للمتابعة.</strong></p>
+
+          <label>الاسم كامل</label>
+          <input type="text" placeholder="ادخل اسمك الكامل">
+
+          <label>رقم الهاتف</label>
+          <div class="phone-input">
+            <img src="images/flag-palestinian.png" alt="PA">
+            <input type="text" placeholder="+972 59 111 1111">
+          </div>
+
+          <button class="btn yellow small-btn">تسجيل الدخول</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Search Bar -->
+  <section class="search">
+    <div class="container">
+      <input type="text" placeholder="ابحث...">
+      <button class="btn yellow">ابحث</button>
+    </div>
+  </section>
+
+  <!-- Section Template -->
+<!-- ===== أفضل المتاجر ===== -->
+<!-- ===== أفضل المتاجر ===== -->
+<section class="store-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>أفضل المتاجر</h2>
+      <a href="#" class="view-all" data-target="best-track">← عرض الكل</a>
+    </div>
+    <div class="store-track" id="best-track">
+      <!-- 6 متاجر -->
+      <div class="store-card">
+        <img src="images/Component 1.png" alt="متجر">
+        <div class="overlay">
+          <p>متجر النور</p>
+          <span>☆☆☆☆☆</span>
+        </div>
+      </div>
+            <div class="store-card">
+        <img src="images/Component 1.png" alt="متجر">
+        <div class="overlay">
+          <p>متجر النور</p>
+          <span>☆☆☆☆☆</span>
+        </div>
+      </div>
+      <div class="store-card">
+        <img src="images/Component 1.png" alt="متجر">
+        <div class="overlay">
+          <p>متجر النور</p>
+          <span>☆☆☆☆☆</span>
+        </div>
+      </div>
+      <div class="store-card">
+        <img src="images/Component 1.png" alt="متجر">
+        <div class="overlay">
+          <p>متجر النور</p>
+          <span>☆☆☆☆☆</span>
+        </div>
+      </div>
+      <div class="store-card">
+        <img src="images/Component 1.png" alt="متجر">
+        <div class="overlay">
+          <p>متجر النور</p>
+          <span>☆☆☆☆☆</span>
+        </div>
+      </div>
+      <div class="store-card">
+        <img src="images/Component 1.png" alt="متجر">
+        <div class="overlay">
+          <p>متجر النور</p>
+          <span>☆☆☆☆☆</span>
+        </div>
+      </div>
+      <div class="store-card">
+        <img src="images/Component 1.png" alt="متجر">
+        <div class="overlay">
+          <p>متجر النور</p>
+          <span>☆☆☆☆☆</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== متاجر الملابس ===== -->
+<section class="store-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>متاجر الملابس</h2>
+      <a href="#" class="view-all" data-target="clothes-track">← عرض الكل</a>
+    </div>
+    <div class="store-track" id="clothes-track">
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== متاجر الاكسسوارات ===== -->
+<section class="store-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>متاجر الاكسسوارات</h2>
+      <a href="#" class="view-all" data-target="accessories-track">← عرض الكل</a>
+    </div>
+    <div class="store-track" id="accessories-track">
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== متاجر الحلويات ===== -->
+<section class="store-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>متاجر الحلويات</h2>
+      <a href="#" class="view-all" data-target="sweets-track">← عرض الكل</a>
+    </div>
+    <div class="store-track" id="sweets-track">
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر الحلوى</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+      <div class="store-card"><img src="images/Component 1.png"><div class="overlay"><p>متجر النور</p><span>☆☆☆☆☆</span></div></div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" id="footer">
+      <div class="footer-col">
+                <img src="images/logocart.svg" alt="footer logo" class="footer-logo">
+        <p>موقع GAZA CART ، لتسهيل طلب خدماتك بسرعة ووقت...</p>
+      </div>
+      <div class="footer-col">
+        <h4>الخدمات</h4>
+        <ul>
+          <li>من نحن</li>
+          <li>الأسئلة الشائعة</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>سياسة الخصوصية</h4>
+        <ul>
+          <li>سياسة الترجيع</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>تابعونا على</h4>
+        <div class="social">
+          <img src="images/YouTube.svg" alt="يوتيوب">
+          <img src="images/Twitter.svg" alt="تويتر">
+          <img src="images/TikTok.svg" alt="تيك توك">
+          <img src="images/Instagram.svg" alt="انستغرام">
+          <img src="images/Facebook.svg" alt="فيسبوك">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.view-all').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('data-target');
+      const track = document.getElementById(targetId);
+
+      if (track) {
+        if (track.scrollLeft === 0) {
+          // من البداية → روح للنهاية
+          track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+        } else {
+          // من النهاية → ارجع للبداية
+          track.scrollTo({ left: 0, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+});
+
+</script>
+
+<script>
+  // فتح المودال عند الضغط على زر تسجيل في الـ Hero
+  document.querySelector(".hero .btn.yellow").addEventListener("click", () => {
+    document.getElementById("authModal").style.display = "flex";
+  });
+
+  // إغلاق المودال عند الضغط على زر X
+  document.querySelector(".modal .close").addEventListener("click", () => {
+    document.getElementById("authModal").style.display = "none";
+  });
+
+  // إغلاق عند الضغط خارج المحتوى
+  window.addEventListener("click", e => {
+    const modal = document.getElementById("authModal");
+    if (e.target === modal) modal.style.display = "none";
+  });
+
+  // التبديل بين تسجيل / تسجيل دخول
+  document.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+
+      btn.classList.add("active");
+      document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+  });
+</script>
+
+
+
+</body>
+</html>
+
