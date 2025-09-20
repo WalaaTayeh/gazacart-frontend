@@ -589,3 +589,341 @@ body {
     justify-content: center;
   }
 }
+
+
+
+
+
+/* ========== Cart Modal ========== */
+.cart-popup {
+  width: 90%;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+/* المثلث */
+.cart-arrow {
+  position: absolute;
+  top: -12px;
+  left: 25px;   /* خلي السهم يسار */
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 15px solid #fff;
+}
+
+.cart-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* العناصر */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff; /* خلفية بيضاء مثل البوب اب */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-info {
+  flex: 1;
+  margin: 0 15px;
+  text-align: right;
+}
+
+.item-info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.item-info p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.delete-btn {
+  background: #ffeaea;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 6px;
+  margin-left: 10px;
+}
+
+.delete-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* الملخص */
+.cart-summary {
+  text-align: right;
+  font-size: 16px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.summary-row.total span {
+  font-weight: 700;
+}
+
+.cart-summary .btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ========== Payment Popup ========== */
+.payment-popup {
+  width: 460px;              /* نفس عرض التصميم */
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 18px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+}
+
+/* النص */
+.payment-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+/* صندوق رفع الإشعار */
+.upload-box {
+  background: #fff7e6;
+  border: 1px solid #f4b000;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+.upload-box label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upload-box img {
+  width: 18px;
+  height: 18px;
+}
+
+/* فاصل "أو" */
+.or-separator {
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.or-separator::before,
+.or-separator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 38%;
+  height: 1px;
+  background: #ccc;
+}
+
+.or-separator::before { right: 0; }
+.or-separator::after { left: 0; }
+
+/* زر دفع كاش */
+.btn-cash {
+  width: 100%;               /* بعرض البوب-اب */
+  background: #f4b000;       /* أصفر */
+  color: #000;               /* النص أسود */
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 5px;
+}
+
+.btn-cash:hover {
+  background: #d99c00;       /* أصفر أغمق عند الهوفر */
+}
+
+/* جسم البوب-اب */
+.payment-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+}
+
+
+/* ========== Checkout Popup ========== */
+.checkout-popup {
+  width: 460px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  font-family: "Cairo", sans-serif;
+  text-align: right;
+}
+
+/* المثلث */
+.checkout-popup .cart-arrow {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 15px solid #fff;
+}
+
+.checkout-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout-body label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.checkout-body input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f3f4f6;
+}
+
+/* إدخال الهاتف */
+.phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f3f4f6;
+}
+
+.phone-input img {
+  width: 22px;
+  height: 16px;
+  margin: 0 8px;
+}
+
+.phone-input input {
+  border: none;
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  background: transparent;
+}
+
+/* زر التأكيد */
+.btn-confirm {
+  width: 100%;
+  background: #f4b000;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-confirm:hover {
+  background: #d99c00;
+}
+
+
+/* ========== Done Modal ========== */
+.done-popup {
+  width: 460px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px 20px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+}
+
+.done-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.btn-done {
+  width: 100%;
+  background: #f4b000;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-done:hover {
+  background: #d99c00;
+}

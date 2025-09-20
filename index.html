@@ -27,7 +27,7 @@
       <a href="#footer">اتصل بنا</a>
     </nav>
     <div class="cart">
-      <img src="images/Frame 20.png" alt="سلة">
+      <img src="images/Frame 20.png" alt="سلة" onclick="openCart()">
       <span>4</span>
     </div>
   </div>
@@ -42,15 +42,14 @@
       <div class="hero-text">
         <h1>تسوق الآن 🛒 | متاجر غزة في مكان واحد 🏬</h1>
         <p>⚡سهولة وسرعة |</p>
-        <button class="btn yellow">تسجيل</button>
-      </div>
+<button class="btn yellow" id="openAuthBtn">تسجيل</button>
+</div>
     </div>
   </section>
 
-<!-- Modal -->
-<div class="modal" id="authModal">
+<div class="modal" id="authModal" style="display: none;">
   <div class="modal-content">
-    <span class="close" onclick="document.getElementById('authModal').style.display='none'">&times;</span>
+    <span class="close">&times;</span>
 
     <!-- التبويبات -->
     <div class="tabs">
@@ -106,6 +105,8 @@
     </div>
   </div>
 </div>
+
+
 
 
   <!-- Search Bar -->
@@ -239,7 +240,6 @@
 </section>
 
 
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container" id="footer">
@@ -273,6 +273,157 @@
     </div>
   </footer>
 
+  
+  <!-- Cart Modal -->
+<div class="modal" id="cartModal">
+  <div class="modal-content cart-popup">
+    <!-- المثلث -->
+    <div class="cart-arrow"></div>
+
+    <span class="close" onclick="document.getElementById('cartModal').style.display='none'">&times;</span>
+
+    <!-- محتوى الكارت -->
+    <div class="cart-body">
+      <!-- المنتجات -->
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="images/Component 1.png" alt="Product">
+          <div class="item-info">
+            <h4>تيشرت اسود</h4>
+            <p>متجر النور للملابس</p>
+            <p><strong>السعر :</strong> 30 شيكل</p>
+          </div>
+          <button class="delete-btn">
+            <img src="images/Frame 7624.png" alt="حذف">
+          </button>
+        </div>
+
+        <div class="cart-item">
+          <img src="images/Component 1.png" alt="Product">
+          <div class="item-info">
+            <h4>تيشرت اسود</h4>
+            <p>متجر النور للملابس</p>
+            <p><strong>السعر :</strong> 30 شيكل</p>
+          </div>
+          <button class="delete-btn">
+            <img src="images/Frame 7624.png" alt="حذف">
+          </button>
+        </div>
+
+        <div class="cart-item">
+          <img src="images/Component 1.png" alt="Product">
+          <div class="item-info">
+            <h4>تيشرت اسود</h4>
+            <p>متجر النور للملابس</p>
+            <p><strong>السعر :</strong> 30 شيكل</p>
+          </div>
+          <button class="delete-btn">
+            <img src="images/Frame 7624.png" alt="حذف">
+          </button>
+        </div>
+      </div>
+
+      <!-- الاجمالي -->
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>التوصيل</span>
+          <span>10 شيكل</span>
+        </div>
+        <div class="summary-row total">
+          <span>الاجمالي</span>
+          <span>100 شيكل</span>
+        </div>
+        <button class="btn yellow">تأكيد</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Payment Modal -->
+<div class="modal" id="paymentModal">
+  <div class="modal-content payment-popup">
+    <!-- المثلث -->
+    <div class="cart-arrow"></div>
+    <span class="close" onclick="document.getElementById('paymentModal').style.display='none'">&times;</span>
+
+    <div class="payment-body">
+      <p class="payment-text">
+        دفع عن طريق حساب بنك فلسطين برقم حساب - <strong>111111</strong>
+      </p>
+
+      <!-- رفع اشعار الدفع -->
+      <div class="upload-box">
+        <input type="file" id="receipt" hidden>
+        <label for="receipt">رفع إشعار الدفع <img src="images/Frame 7624.png" alt="upload"></label>
+      </div>
+
+      <div class="or-separator">
+        <span>أو</span>
+      </div>
+
+      <!-- دفع كاش -->
+      <button type="button" class="btn-cash">دفع كاش</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Checkout Modal -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-content checkout-popup">
+    <!-- المثلث -->
+    <div class="cart-arrow"></div>
+    <span class="close" onclick="document.getElementById('checkoutModal').style.display='none'">&times;</span>
+
+    <div class="checkout-body">
+      <form>
+        <label>ادخل الاسم كامل</label>
+        <input type="text" placeholder="الاسم" />
+
+        <label>ادخل العنوان لتوصيل المنتج</label>
+        <input type="text" placeholder="العنوان" />
+
+        <label>رقم الهاتف</label>
+        <div class="phone-input">
+          <img src="images/flag-palestinian.png" alt="flag">
+          <input type="tel" placeholder="+972 59 111 1111" />
+        </div>
+
+        <label>رقم هاتف احتياطي</label>
+        <div class="phone-input">
+          <img src="images/flag-palestinian.png" alt="flag">
+          <input type="tel" placeholder="+972 59 111 1111" />
+        </div>
+
+        <button type="submit" class="btn-confirm">تأكيد</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Done Modal -->
+<div class="modal" id="doneModal">
+  <div class="modal-content done-popup">
+    <!-- المثلث -->
+    <div class="cart-arrow"></div>
+    <span class="close" onclick="document.getElementById('doneModal').style.display='none'">&times;</span>
+
+    <div class="done-body">
+      <p class="done-text">
+        سيتواصل معك مندوبينا لتوصيل المنتجات و تأكيد الدفع! <br>
+        نتمنى لك تسوقاً ممتعاً!
+      </p>
+
+      <button class="btn-done">أكمل التسوق</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.view-all').forEach(button => {
@@ -296,6 +447,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 </script>
+
+
 
 <script>
   // فتح المودال عند الضغط على زر تسجيل في الـ Hero
@@ -325,6 +478,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 </script>
+
+
+
+<script>
+  // افتح المودال
+  function openCart() {
+    document.getElementById('cartModal').style.display = 'flex';
+  }
+
+  // اغلاق عند الضغط خارج المودال
+  window.onclick = function(event) {
+    const modal = document.getElementById('cartModal');
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // عند الضغط على زر "تأكيد" بالكارت
+document.querySelectorAll(".cart-summary .btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.getElementById("cartModal").style.display = "none"; // اغلاق الكارت
+    document.getElementById("paymentModal").style.display = "flex"; // فتح الدفع
+  });
+});
+
+
+// عند الضغط على زر "دفع كاش"
+document.querySelector(".btn-cash").addEventListener("click", function() {
+  // اغلاق بوب اب الدفع
+  document.getElementById("paymentModal").style.display = "none";
+  // فتح بوب اب الشيك آوت
+  document.getElementById("checkoutModal").style.display = "flex";
+});
+
+// زر تأكيد في checkout يفتح doneModal
+document.querySelector(".checkout-popup form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("checkoutModal").style.display = "none";
+  document.getElementById("doneModal").style.display = "flex";
+});
+
+// زر أكمل التسوق يرجع المستخدم للصفحة الرئيسية
+document.querySelector(".btn-done").addEventListener("click", function() {
+  document.getElementById("doneModal").style.display = "none";
+});
+
+</script>
+
 
 
 
