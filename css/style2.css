@@ -79,7 +79,7 @@ body {
 
 /* ========== البانر ========== */
 .banner {
-    width: 90%;
+    width: 85%;
     height: 400px;
     background: #A2A2A2;
     border-radius: 12px;
@@ -93,30 +93,46 @@ body {
 }
 
 /* ========== البروفايل ========== */
+/* ========== البروفايل ========== */
 .profile {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: -100px 35px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: -100px 35px 20px 0;
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: #d8f3f3;
-    border: 4px solid #fff;
-    margin-right: 35px; /* يدفعها لليسار */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #d8f3f3;
+  border: 4px solid #fff;
 }
 
 .profile-info {
-    margin-left: 15px;
-    z-index: 10;
+  margin-left: 10px;
+  z-index: 10;
+  margin-right: 70px; /* يدفعها لليسار */
 }
+
+.profile-info h2 {
+  margin: 0;              /* يشيل كل الهوامش */
+  margin-bottom: 5px;     /* يعطي مسافة صغيرة بس */
+  font-size: 20px;        /* حجم الخط (حسب التصميم) */
+  font-weight: 700;
+}
+
+/* النجوم كنص */
+.stars {
+  font-size: 18px;
+  color: #f5b700; /* اللون الذهبي */
+  letter-spacing: 2px; /* مسافة صغيرة بين النجوم */
+}
+
 
 /* ========== قسم التعريف ========== */
 .about {
-    width: 95%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -143,7 +159,7 @@ body {
 
 /* ========== زر إضافة منتج ========== */
 .add-products {
-  width: 95%;
+  width: 80%;
   margin: 40px auto 20px;
   display: flex;
   justify-content: space-between;
@@ -170,6 +186,8 @@ body {
 /* Related Products */
 /* ===== قسم المنتجات ===== */
 .related {
+  width: 90%;           /* تضبط مساحة المنتجات */
+  margin: 0 auto;
   padding: 20px 40px;
 }
 
