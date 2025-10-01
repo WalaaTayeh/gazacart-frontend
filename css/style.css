@@ -9,7 +9,7 @@ body {
 
 /* الحاوية العامة */
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
 }
@@ -574,24 +574,16 @@ body {
   transform: scale(1.1);
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .footer .container {
-    grid-template-columns: repeat(2, 1fr); /* عمودين */
-  }
-}
-@media (max-width: 560px) {
-  .footer .container {
-    grid-template-columns: 1fr; /* عمود واحد */
+
+
+/* ========== الحقوق ========== */
+.copyright {
     text-align: center;
-  }
-  .footer .social {
-    justify-content: center;
-  }
+    background: #443c2e;
+    color: #fff;
+    padding: 10px;
+    font-size: 13px;
 }
-
-
-
 
 
 /* ========== Cart Modal ========== */
@@ -927,3 +919,4 @@ body {
 .btn-done:hover {
   background: #d99c00;
 }
+
