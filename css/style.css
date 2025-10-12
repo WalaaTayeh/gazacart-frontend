@@ -1,9 +1,42 @@
+/* ========== ROOT COLORS ========== */
+:root {
+  /* Primary Palette */
+  --primary-50: #FFF9E5;
+  --primary-100: #FFF2CC;
+  --primary-200: #FFE699;
+  --primary-300: #FFD966;
+  --primary-400: #CC9900;
+  --primary-500: #F5B800;
+  --primary-600: #CC9900;
+  --primary-700: #997300;
+  --primary-800: #664D00;
+  --primary-900: #332600;
+  --primary-950: #1A1300;
+  --primary-bg: #FDFBF7;
+
+  /* Neutral / Black Palette */
+  --black-50: #F2F2F2;
+  --black-100: #E6E6E6;
+  --black-200: #CCCCCC;
+  --black-300: #B3B3B3;
+  --black-400: #999999;
+  --black-500: #F2F2F2;
+  --black-600: #666666;
+  --black-700: #4D4D4D;
+  --black-800: #333333;
+  --black-900: #1A1A1A;
+  --black-950: #0D0D0D;
+
+  /* Status Colors */
+  --error-bg: #FEE2E2;
+}
+
 /* استايل أساسي */
 body {
   font-family: 'Cairo', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fffaf0;
+  background-color: var(--primary-bg);
   direction: rtl;
 }
 
@@ -16,8 +49,8 @@ body {
 
 /* ===== Header ===== */
 .header {
-  background: #fffaf0; /* لون خلفية فاتح */
-  border-bottom: 1px solid #ddd;
+  background: var(--primary-bg); /* لون خلفية فاتح */
+  border-bottom: 1px solid var(--black-100);
   position: fixed;
    top: 0;                /* يلتصق بأعلى الصفحة */
   right: 0;              /* يلتصق من اليمين */
@@ -55,14 +88,13 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: #222;
+  color: var(--black-800);
   font-size: 15px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
 .nav a:hover {
-  color: #f4b000; /* لون ذهبي عند الهوفر */
+  color: var(--primary-500);
 }
 
 /* ===== Cart ===== */
@@ -81,7 +113,7 @@ body {
   position: absolute;
   top: -6px;
   left: -6px;
-  background: #f4b000;
+  background: var(--primary-500);
   color: #fff;
   font-size: 12px;
   font-weight: bold;
@@ -92,7 +124,7 @@ body {
 /* Hero Section */
 /* ========== Hero Section ========== */
 .hero {
-  background-color: #fffaf0; /* نفس خلفية الموقع */
+  background-color: var(--primary-bg);
   padding: 70px 0;
 }
 
@@ -125,20 +157,20 @@ body {
   margin: 0 0 14px;
   font-weight: 800;
   line-height: 1.5;
-  color: #111;
+  color: var(--black-900);
   font-size: clamp(28px, 3.8vw, 48px);  /* مرن بين الموبايل والديسكتوب */
 }
 
 .hero-text p {
   margin: 0 0 28px;
-  color: #5a5a5a;
+  color: var(--black-600);
   font-size: clamp(15px, 1.2vw, 19px);
 }
 
 /* زر التسجيل */
 .btn.yellow {
-  background-color: #f4b000;
-  color: #fff;
+  background-color: var(--primary-500);
+  color: var(--black-950);
   border: none;
   padding: 14px 40px;
   font-size: 16px;
@@ -148,7 +180,7 @@ body {
   transition: background 0.25s ease;
 }
 .btn.yellow:hover {
-  background-color: #d99900;
+  background-color: var(--primary-600);
 }
 
 /* ====== Responsive ====== */
@@ -209,7 +241,7 @@ body {
   top: 12px; left: 16px;
   font-size: 24px;
   cursor: pointer;
-  color: #333;
+  color: var(--black-800);
 }
 
 /* ====== التبويبات ====== */
@@ -232,7 +264,7 @@ body {
 }
 
 .tab-btn.active {
-  background: #f4b000;
+  background: var(--primary-500);
   color: #fff;
 }
 
@@ -297,7 +329,7 @@ body {
 .modal-form input {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--black-200);
   border-radius: 8px;
   margin-bottom: 15px;
   font-size: 14px;
@@ -306,7 +338,7 @@ body {
 .phone-input {
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--black-200);
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -326,8 +358,8 @@ body {
 
 /* زر التسجيل */
 .btn.yellow {
-  background: #f4b000;
-  color: #fff;
+  background: var(--primary-500);
+  color: var(--black-950);
   border: none;
   border-radius: 8px;
   padding: 10px;
@@ -339,18 +371,15 @@ body {
 }
 
 .btn.yellow:hover {
-  background: #d89c00;
+  background: var(--primary-600);
 }
-
-
-
 
 
 
 
 /* ========== Search Section ========== */
 .search {
-  background-color: #fffaf0; /* نفس خلفية الموقع */
+  background-color: var(--primary-bg);
   padding: 30px 0;
 }
 
@@ -366,21 +395,21 @@ body {
   flex: 1;
   padding: 14px 18px;
   font-size: 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--black-200);
   border-radius: 8px;
   outline: none;
   text-align: right;
 }
 
 .search input:focus {
-  border-color: #f4b000;
-  box-shadow: 0 0 4px rgba(244, 176, 0, 0.4);
+  border-color: var(--primary-500);
+  box-shadow: 0 0 4px rgba(245, 183, 0, 0.4);
 }
 
 /* زر أصفر عام */
 .btn.yellow {
-  background-color: #f4b000;
-  color: #000;               /* النص أسود */
+  background-color: var(--primary-500);
+  color: var(--black-950);           /* النص أسود */
   border: none;
   padding: 18px 0;           /* زيادة الطول */
   font-size: 18px;
@@ -393,7 +422,7 @@ body {
 }
 
 .btn.yellow:hover {
-  background-color: #d99900;
+  background-color: var(--primary-600);
 }
 
 /* ====== Responsive ====== */
@@ -432,7 +461,7 @@ body {
 .section-header a {
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  color: var(--black-800);
   text-decoration: none;
 }
 .section-header a:hover { color: #f4b000; }
@@ -503,7 +532,7 @@ body {
 
 /* ========== Footer ========== */
 .footer {
-  background-color: #fff6e6; /* الخلفية الفاتحة */
+  background-color: var(--primary-100);
   padding: 40px 0 20px;
   margin-top: 40px;
   font-family: 'Cairo', sans-serif;
@@ -547,13 +576,13 @@ body {
 .footer-col ul li {
   margin-bottom: 8px;
   font-size: 14px;
-  color: #333;
+  color: var(--black-800);
   cursor: pointer;
   transition: color 0.3s;
 }
 
 .footer-col ul li:hover {
-  color: #f4b000; /* نفس لون الزر */
+  color: var(--primary-500);
 }
 
 /* الأيقونات */
@@ -579,7 +608,7 @@ body {
 /* ========== الحقوق ========== */
 .copyright {
     text-align: center;
-    background: #443c2e;
+    background: var(--primary-900);
     color: #fff;
     padding: 10px;
     font-size: 13px;
@@ -628,7 +657,7 @@ body {
   background: #fff; /* خلفية بيضاء مثل البوب اب */
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #eee;
+  border: 1px solid var(--black-100);
 }
 
 .cart-item img {
@@ -653,11 +682,11 @@ body {
 .item-info p {
   margin: 2px 0;
   font-size: 14px;
-  color: #333;
+  color: var(--black-800);
 }
 
 .delete-btn {
-  background: #ffeaea;
+  background: var(--error-bg);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -718,13 +747,13 @@ body {
 
 /* صندوق رفع الإشعار */
 .upload-box {
-  background: #fff7e6;
-  border: 1px solid #f4b000;
+  background: var(--primary-50);
+  border: 1px solid var(--primary-500);
   border-radius: 10px;
   padding: 10px 12px;
   cursor: pointer;
   font-size: 14px;
-  color: #333;
+  color: var(--black-700);
   margin-bottom: 14px;
 }
 
@@ -765,8 +794,8 @@ body {
 /* زر دفع كاش */
 .btn-cash {
   width: 100%;               /* بعرض البوب-اب */
-  background: #f4b000;       /* أصفر */
-  color: #000;               /* النص أسود */
+  background: var(--primary-500);
+  color: var(--black-950);         /* النص أسود */
   font-size: 16px;
   font-weight: 700;
   border: none;
@@ -778,7 +807,7 @@ body {
 }
 
 .btn-cash:hover {
-  background: #d99c00;       /* أصفر أغمق عند الهوفر */
+  background: var(--primary-600);
 }
 
 /* جسم البوب-اب */
@@ -835,19 +864,19 @@ body {
 .checkout-body input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--black-200);
   border-radius: 8px;
   font-size: 14px;
-  background: #f3f4f6;
+  background: var(--primary-50);
 }
 
 /* إدخال الهاتف */
 .phone-input {
   display: flex;
   align-items: center;
-  border: 1px solid #ddd;
+  border: 1px solid var(--black-200);
   border-radius: 8px;
-  background: #f3f4f6;
+  background: var(--primary-50);
 }
 
 .phone-input img {
@@ -867,8 +896,8 @@ body {
 /* زر التأكيد */
 .btn-confirm {
   width: 100%;
-  background: #f4b000;
-  color: #000;
+  background: var(--primary-500);
+  color: var(--black-950);
   font-size: 15px;
   font-weight: 700;
   border: none;
@@ -879,7 +908,7 @@ body {
 }
 
 .btn-confirm:hover {
-  background: #d99c00;
+  background: var(--primary-600);
 }
 
 
@@ -898,15 +927,15 @@ body {
 .done-text {
   font-size: 16px;
   font-weight: 600;
-  color: #000;
+  color: var(--black-900);
   line-height: 1.8;
   margin-bottom: 20px;
 }
 
 .btn-done {
   width: 100%;
-  background: #f4b000;
-  color: #000;
+  background: var(--primary-500);
+  color: var(--black-950);
   font-size: 15px;
   font-weight: 700;
   border: none;
@@ -917,6 +946,6 @@ body {
 }
 
 .btn-done:hover {
-  background: #d99c00;
+  background: var(--primary-600);
 }
 

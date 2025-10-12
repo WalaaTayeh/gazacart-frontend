@@ -1,8 +1,41 @@
+/* ========== ROOT COLORS ========== */
+:root {
+  /* Primary Palette */
+  --primary-50: #FFF9E5;
+  --primary-100: #FFF2CC;
+  --primary-200: #FFE699;
+  --primary-300: #FFD966;
+  --primary-400: #CC9900;
+  --primary-500: #F5B800;
+  --primary-600: #CC9900;
+  --primary-700: #997300;
+  --primary-800: #664D00;
+  --primary-900: #332600;
+  --primary-950: #1A1300;
+  --primary-bg: #FDFBF7;
+
+  /* Neutral / Black Palette */
+  --black-50: #F2F2F2;
+  --black-100: #E6E6E6;
+  --black-200: #CCCCCC;
+  --black-300: #B3B3B3;
+  --black-400: #999999;
+  --black-500: #F2F2F2;
+  --black-600: #666666;
+  --black-700: #4D4D4D;
+  --black-800: #333333;
+  --black-900: #1A1A1A;
+  --black-950: #0D0D0D;
+
+  /* Status Colors */
+  --error-bg: #FEE2E2;
+}
+
 body {
   font-family: 'Cairo', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fffaf0;
+  background-color: var(--primary-bg);
   direction: rtl;
 }
 
@@ -13,17 +46,15 @@ body {
   margin: auto;
 }
 
-
-
 /* ===== Header ===== */
 .header {
-  background: #fffaf0; /* لون خلفية فاتح */
-  border-bottom: 1px solid #ddd;
+  background: var(--primary-bg); /* لون خلفية فاتح */
+  border-bottom: 1px solid var(--black-100);
   position: fixed;
-   top: 0;                /* يلتصق بأعلى الصفحة */
-  right: 0;              /* يلتصق من اليمين */
-  left: 0;               /* يلتصق من اليسار */
-  z-index: 1000; 
+  top: 0; /* يلتصق بأعلى الصفحة */
+  right: 0; /* يلتصق من اليمين */
+  left: 0; /* يلتصق من اليسار */
+  z-index: 1000;
 }
 
 .header .container {
@@ -56,40 +87,133 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: #222;
+  color: var(--black-900);
   font-size: 15px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav a:hover {
-  color: #f4b000; /* لون ذهبي عند الهوفر */
+  color: var(--primary-500); /* لون ذهبي عند الهوفر */
+}
+
+/* ===== Dropdown Container ===== */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  direction: rtl;
+  margin-right: auto; /* تدفع السلة لليسار */
+}
+
+/* ===== Dropdown Button (متجر النور) ===== */
+.dropdown {
+  background: var(--primary-100);
+  border: none;
+  border-radius: 16px;
+  padding: 15px 25px; /* أكبر ارتفاع وأعرض */
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black-900);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 150px; /* العرض الأدنى */
+  transition: background 0.3s;
+}
+
+.dropdown:hover {
+  background: var(--primary-200);
+}
+
+/* ===== Dropdown Arrow Icon ===== */
+.dropdown img {
+  width: 14px;
+  transition: transform 0.3s;
+}
+
+/* ===== Dropdown Menu ===== */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0; /* محاذاة القائمة لليمين */
+  top: 50px; /* أسفل الزر بمسافة بسيطة */
+  background: none; /* لا خلفية صفراء */
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  z-index: 1000;
+}
+
+/* ===== Logout Button (تسجيل خروج) ===== */
+.logout-btn {
+  background: var(--error-bg); /* وردي ناعم */
+  border: none;
+  color: #c53030;
+  font-weight: 700;
+  padding: 12px 25px;
+  border-radius: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  min-width: 150px; /* نفس عرض الزر الأصفر */
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #ffcfcf;
+}
+
+/* ===== Show Class ===== */
+.dropdown-menu.show {
+  display: block;
+}
+
+/* ===== Rotate Arrow When Open ===== */
+.dropdown.open img {
+  transform: rotate(180deg);
 }
 
 
-.dropdown {
-      margin-right: auto; /* تدفع السلة لليسار */
-    background: #FFF2CC;
-    padding: 8px 15px;
-    border-radius: 16px;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
+/* ===== Cart ===== */
+.cart {
+  margin-right: auto; /* تدفع السلة لليسار */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart img {
+  height: 32px;
+}
+
+.cart span {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  background: var(--primary-500);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 50%;
 }
 
 /* ========== البانر ========== */
 .banner {
-    width: 85%;
-    height: 400px;
-    background: #A2A2A2;
-    border-radius: 12px;
-    margin: 20px auto;
-    margin-top: 90px; /* يساوي أو أكبر من ارتفاع الهيدر */
-    position: relative;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+  width: 85%;
+  height: 400px;
+  background: #A2A2A2;
+  border-radius: 12px;
+  margin: 20px auto;
+  margin-top: 90px; /* يساوي أو أكبر من ارتفاع الهيدر */
+  position: relative;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
 /* ========== البروفايل ========== */
@@ -116,33 +240,33 @@ body {
 }
 
 .profile-info h2 {
-  margin: 0;              /* يشيل كل الهوامش */
-  margin-bottom: 5px;     /* يعطي مسافة صغيرة بس */
-  font-size: 20px;        /* حجم الخط (حسب التصميم) */
+  margin: 0; /* يشيل كل الهوامش */
+  margin-bottom: 5px; /* يعطي مسافة صغيرة بس */
+  font-size: 20px; /* حجم الخط (حسب التصميم) */
   font-weight: 700;
 }
 
 /* النجوم كنص */
 .stars {
   font-size: 18px;
-  color: #f5b700; /* اللون الذهبي */
+  color: var(--primary-500); /* اللون الذهبي */
   letter-spacing: 2px; /* مسافة صغيرة بين النجوم */
 }
 
-
 /* ========== قسم التعريف ========== */
 .about {
-    width: 85%;
-    margin: 0 auto;
+  width: 85%;
+  margin: 0 auto;
 }
 
+
 .about button {
-    background: #FFF2CC;
+    background: var(--primary-100);
     width: 125px;
     height: 35px;
     border: none;
     border-radius: 16px;
-    color: #222222;
+    color: var(--black-900);
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
@@ -159,7 +283,7 @@ body {
 
 /* ========== زر إضافة منتج ========== */
 .add-products {
-  width: 80%;
+  width: 85%;
   margin: 40px auto 20px;
   display: flex;
   justify-content: space-between;
@@ -167,8 +291,8 @@ body {
 }
 
 .add-product {
-  background: #F5B800;
-  color: #222;
+  background: var(--primary-500);
+  color: var(--black-900);
   padding: 20px 80px;
   border: none;
   border-radius: 16px;
@@ -177,16 +301,150 @@ body {
   cursor: pointer;
 }
 
+/* ===== Popup Overlay ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
 
-.add-product:hover {
-    background: #f2c94c;
+/* ===== Popup Box ===== */
+.popup-box {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 420px;
+  padding: 30px 40px;
+  text-align: right;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+}
+
+/* ===== Close Button ===== */
+.close-popup {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: var(--black-800);
+  cursor: pointer;
+}
+
+/* ===== Heading ===== */
+.popup-box h2 {
+  margin-bottom: 20px;
+  color: var(--black-900);
+  font-weight: 800;
+  font-size: 22px;
+}
+
+/* ===== Labels ===== */
+.popup-box label {
+  display: block;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  color: var(--black-700);
+  font-size: 15px;
+}
+
+/* ===== Inputs & Textarea ===== */
+.popup-box input[type="text"],
+.popup-box textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #f1f4f9;
+  color: var(--black-900);
+  font-size: 14px;
+  font-family: 'Cairo', sans-serif; /* توحيد الخط في كل الحقول */
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.popup-box input[type="text"]:focus,
+.popup-box textarea:focus {
+  background: #e9ecf1;
+}
+
+.popup-box textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* ===== Placeholder Style (統一 الخط) ===== */
+.popup-box input::placeholder,
+.popup-box textarea::placeholder {
+  font-family: 'Cairo', sans-serif;
+  color: #888;
+  font-size: 14px;
+}
+
+/* ===== Upload Box ===== */
+.upload-box {
+  border-radius: 10px;
+  background: #f1f4f9;
+  padding: 12px 15px;
+  text-align: right; /* تم التعديل ليكون النص لليمين */
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--black-700);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.upload-box:hover {
+  background: #e5e8ec;
+}
+
+.upload-box i {
+  font-size: 18px;
+  color: var(--black-800);
+}
+
+/* ===== File Input Hidden ===== */
+.upload-box input[type="file"] {
+  display: none;
+}
+
+/* ===== Submit Button ===== */
+.submit-btn {
+  background: #ffcc00;
+  border: none;
+  color: var(--black-900);
+  font-weight: 700;
+  padding: 10px 0;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.submit-btn:hover {
+  background: #e6b800;
 }
 
 /* ========== المنتجات ========== */
 /* Related Products */
 /* ===== قسم المنتجات ===== */
 .related {
-  width: 90%;           /* تضبط مساحة المنتجات */
+  width: 90%; /* تضبط مساحة المنتجات */
   margin: 0 auto;
   padding: 20px 40px;
 }
@@ -201,7 +459,7 @@ body {
   background: #fff;
   padding: 15px;
   border-radius: 12px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--black-100);
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
@@ -236,7 +494,7 @@ body {
   margin: 0;
   font-size: 15px;
   font-weight: 700;
-  color: #222;
+  color: var(--black-900);
 }
 .stars {
   font-size: 20px;
@@ -249,28 +507,29 @@ body {
   margin: 0;
   font-size: 15px;
   font-weight: 700;
-  color: #222;
+  color: var(--black-900);
   text-align: right;
 }
 
 /* الأزرار */
 .actions {
   display: flex;
-    justify-content: flex-end; /* يبدأ من اليمين */
+  justify-content: flex-end; /* يبدأ من اليمين */
   flex-direction: row-reverse; /* يخلي أول زر (الحذف) يجي أقرب لليمين */
   gap: 8px;
 }
 
-.actions button {
+.actions .btn-edit,
+.actions .btn-delete {
   width: 39px;
   height: 39px;
-  border: none;           /* ما في حدود */
-  background: transparent; /* شفاف */
+  border: none; /* بدون حدود */
+  background: transparent; /* خلفية شفافة */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 0; /* نشيل أي مسافات */
+  padding: 0; /* بدون مسافات إضافية */
 }
 
 /* أيقونة التعديل */
@@ -281,6 +540,44 @@ body {
   object-fit: contain;
 }
 
+.btn-add-product {
+  background: var(--primary-500);
+  color: var(--black-900);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-add-product:hover {
+  background: var(--primary-600);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end; /* خلي الزر في النص */
+  flex-direction: row-reverse; /* يخلي أول زر (الحذف) يجي أقرب لليمين */
+  margin-top: auto; /* ينزل لأسفل الكارد */
+}
+
+.btn-add-product {
+  background: var(--primary-500);
+  color: var(--black-900);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-add-product:hover {
+  background: var(--primary-600);
+}
 
 /* ===== استجابة للشاشات الصغيرة ===== */
 @media (max-width: 1200px) {
@@ -293,13 +590,11 @@ body {
   .products-grid { grid-template-columns: 1fr; }
 }
 
-
-
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
-.footer .container {
+  .footer .container {
     grid-template-columns: repeat(2, 1fr); /* عمودين */
-}
+  }
 }
 @media (max-width: 560px) {
   .footer .container {
@@ -313,7 +608,7 @@ body {
 
 /* ========== Footer ========== */
 .footer {
-  background-color: #fff6e6; /* الخلفية الفاتحة */
+  background-color: var(--primary-100);
   padding: 40px 0 20px;
   margin-top: 40px;
   font-family: 'Cairo', sans-serif;
@@ -357,13 +652,13 @@ body {
 .footer-col ul li {
   margin-bottom: 8px;
   font-size: 14px;
-  color: #333;
+  color: var(--black-800);
   cursor: pointer;
   transition: color 0.3s;
 }
 
 .footer-col ul li:hover {
-  color: #f4b000; /* نفس لون الزر */
+  color: var(--primary-500);
 }
 
 /* الأيقونات */
@@ -389,39 +684,37 @@ body {
 /* ========== الحقوق ========== */
 .copyright {
     text-align: center;
-    background: #443c2e;
+    background: var(--primary-900);
     color: #fff;
     padding: 10px;
     font-size: 13px;
 }
 
 
-
-
 /* ========== تحسين العرض للجوال ========== */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .profile {
-        flex-direction: column-reverse;
-        text-align: center;
-        margin: -40px auto 20px;
-    }
+  .profile {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: -40px auto 20px;
+  }
 
-    .about {
-        width: 95%;
-    }
+  .about {
+    width: 95%;
+  }
 
-    .products {
-        width: 95%;
-    }
+  .products {
+    width: 95%;
+  }
 
-    footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
 }
